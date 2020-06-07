@@ -1,0 +1,18 @@
+extends ../index.pug
+block content
+	table.table
+		thead
+			tr
+				th(scope='col') Avatar
+				th(scope='col') Name
+				th(scope='col') Email
+				th(scope='col') About
+		tbody
+			each val in users
+				tr
+					td
+						img(src=val.avatar)
+					td= val.name
+					td= val.email
+					td
+						a(href='/users/'+ val.id) Views

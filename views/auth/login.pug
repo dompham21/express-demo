@@ -1,0 +1,13 @@
+extends ../index.pug
+block content
+	if errors
+		each error in errors
+			.alert.alert-danger(role='alert')= error
+	form(action='/auth/login',method='post')
+		.form-group
+			label(for='exampleInputEmail1') Email address
+			input#exampleInputEmail1.form-control(type='email',name='email',value=value?value.name:'')
+		.form-group
+			label(for='exampleInputPassword1') Password
+			input#exampleInputPassword1.form-control(type='password',name='password')
+		button.btn.btn-primary(type='submit') Submit

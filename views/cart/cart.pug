@@ -1,0 +1,14 @@
+extends ../index.pug
+block content
+	table.table
+		thead
+			tr
+				th(scope='col') Name product
+				th(scope='col') Quantity
+				th(scope='col') Amount
+		tbody
+			each val,item in cartName,cartCount
+				tr
+					td= val.name 
+					td= item.index
+					td null

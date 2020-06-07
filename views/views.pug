@@ -1,0 +1,14 @@
+extends ./index.pug
+block content
+	table.table
+		thead
+			tr
+				th(scope='col') Avatar
+				th(scope='col') Name
+				th(scope='col') Email
+		tbody
+			tr
+				td
+					img(src=users.avatar)
+				td= users.name
+				td= users.email

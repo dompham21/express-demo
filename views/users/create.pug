@@ -1,0 +1,15 @@
+extends ../index.pug
+block content
+	form(method="post", action="/users/create", enctype="multipart/form-data")
+		.form-group
+			label(for='exampleInputName') Full Name
+			input#exampleInputName.form-control(type='name',name='name')
+		.form-group
+			label(for='exampleInputEmail') Email address
+			input#exampleInputEmail.form-control(type='email',name='email')
+		.form-group
+			label(for='exampleInputPassword') Password
+			input#exampleInputPassword.form-control(type='password', name='password')
+		.form-group
+			input#exampleFormControlFile1.form-control-file(type='file',name='avatar')
+		button.btn.btn-primary(type='submit') Create

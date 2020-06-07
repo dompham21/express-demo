@@ -1,0 +1,11 @@
+extends ../index.pug
+block content
+	.row
+		each product in products
+			.col-sm-6.col-md-4.col-lg-4
+				.card.mb-3
+					img.card-img-top(src=product.image)
+					.card-body
+						h5.card-title= product.name
+						p.card-text= product.description
+						a.btn.btn-primary(href='/cart/add/'+product.id) Add to cart
